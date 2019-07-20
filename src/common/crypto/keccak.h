@@ -29,6 +29,7 @@
 #include <stdint.h>
 #include <string.h>
 
+#define swap64le
 
 namespace xmrig {
 
