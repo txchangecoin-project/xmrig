@@ -40,7 +40,7 @@
 #include "base/net/stratum/SubmitResult.h"
 #include "base/net/tools/RecvBuf.h"
 #include "base/net/tools/Storage.h"
-#include "common/crypto/Algorithm.h"
+#include "crypto/common/Algorithm.h"
 
 
 typedef struct bio_st BIO;
@@ -92,7 +92,7 @@ private:
     bool parseJob(const rapidjson::Value &params, int *code);
     bool parseLogin(const rapidjson::Value &result, int *code);
     bool send(BIO *bio);
-    bool verifyAlgorithm(const Algorithm &algorithm) const;
+    bool verifyAlgorithm(const Algorithm &algorithm, const char *algo) const;
     int resolve(const String &host);
     int64_t send(const rapidjson::Document &doc);
     int64_t send(size_t size);
